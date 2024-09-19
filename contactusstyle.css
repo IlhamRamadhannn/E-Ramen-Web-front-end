@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --main-color: rgb(190, 102, 0);
+    --text-color: rgb(255, 255, 255);
+    --bg-color:rgb(255, 255, 255);
+    --big-font: 4.8rem;
+    --h2-font:2,25rem;
+    --p-font:0.9rem;
+}
+body{
+    background-image: url("image/japanese-tatami-effect-picture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.heading{
+    line-height: 12px;
+    text-decoration: none;
+    padding-left: 5px;
+    color:#FFF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+.logoo{
+    width: 100px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 2px 8%;
+    overflow: hidden;
+    background-color: #422600;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100vw; /* Full width */
+}
+nav .logo{
+    width: 160;
+    cursor: pointer;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li :hover{
+    color: orange;
+    font-size: 1.1 rem;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+section{
+    padding: 55px 25%;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span{
+    color: red;
+}
+
+
+form{
+    background: #a59167;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+form h3{
+    color: #000000;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #d3d3d3;
+    font-size: 16px;
+}
+
+form button{
+    padding: 15px;
+    background: #7e5600;
+    color: #FFF;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+
+}
+
+
+
+
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer{
+    padding: 10px 0;
+}
+.col{
+    width: 25%;
+}
+.col h4{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    position: relative;
+}
+.col h4::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    left: 0;
+    bottom: -8px;
+    background: var(--main-color);
+}
+.col ul li:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.col ul li a{
+    color: #FFF;
+    font-size: 1.1rem;
+    display: block;
+    text-transform: capitalize;
+    transition: .4s;
+}
+.col ul li a:hover{
+    color: var(--text-color);
+    transform: translateX(-12px);
+}
+.col .social{
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.col .social a{
+    height: 40px;
+    width: 40px;
+    background: var(--main-color);
+    color: var(--text-color)
+}
+
+@media only screen and (max-width: 1560px) {
+    header{
+        padding: 15px 40px ;
+    }
+    :root{
+        --big-font: 3.5rem;
+        --h2-font: 1.3rem;
+    }
+  }
+  
+@media (max-width: 1140px) {
+    section{
+        padding: 50px 8%;
+    }
+    #menu-icon{
+        display: initial;
+        color: #fff;
+    }
+    header .navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex ;
+        flex-direction: column;
+        text-align: center;
+        background: #2b2640;
+        transition: .3s;
+    }
+    header .navbar.active{
+        top:70px;
+    }
+    navbar a{
+        padding: 1.5rem;
+        display: block;
+    }
+    .col{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 720px){
+    header{
+        padding: 10px 16px;
+    }
+    .home{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+@media (max-width: 767px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        background-color: #422600;
+        z-index: 1;
+    }
+  
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+  
+    nav ul li a {
+        padding: 10px 0;
+        color: #fff;
+    }
+  
+    nav .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+  
+    nav .menu-icon:hover {
+        color: orange;
+    }
+  
+    nav .active {
+        display: block;
+    }
+}

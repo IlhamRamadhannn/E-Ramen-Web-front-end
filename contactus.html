@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eramen</title>
+    <link rel="stylesheet" href="contactusstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your Name" onkeyup="validateName()">
+            <span id="name-error"></span>
+            <input type="email" id="email" placeholder="Email id" onkeyup="validateEmail()">
+            <span id="email-error"></span>
+            <input type="number" id="number" placeholder="Phone No." onkeyup="validateNumber()" >
+            <span id="number-error"></span>
+            <input type="text" id="prefence" placeholder="Preferences ( ramen / dryramen )" onkeyup="validatepref()">
+            <span id="pref-error"></span>
+            <textarea id="message" cols="4" placeholder="How can we help you?" onkeyup="validateMessage()"></textarea>
+            <span id="message-error"></span>
+            <label for="accept">
+            
+            <input type="checkbox" id="accept" name="accept" value="yes" onkeyup="validateCheckbox()"> Agree to receive newsletter</label>
+            <span id="checkbox-error"></span>
+            <button id="submit" type="submit" onkeyup="validateForm()">Send</button>
+            <span id="submit-error"></span>
+        </form>
+    </div>
+    <hr size="5" width="100%" color= "#fff">
+       <!-- footer/contact us -->
+       <section id="contact">
+        <div class="footer">
+            <div class="main">
+                <div class="col">
+                    <h4>Webpage</h4>
+                    <ul>
+                        <li><a href="ramen.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Promo</h4>
+                    <ul>
+                        <li><a href="promo.html">Today's Promo</a></li>
+                        <li><a href="promo.html">Upcoming Promo</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="https://api.whatsapp.com/send/?phone=6281282322461&text&type=phone_number&app_absent=0">Call us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Follow us on</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/_ilhamsr/">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <nav>
+        <div class="logoo">
+            <img src="image/Brown_and_Orange_Illustration_Noodle_Logo-removebg-preview (1).png" class="logoo">
+        </div>
+        <div class="heading">
+            E-Ramen
+        </div>
+        <ul>
+            <li><a href="ramen.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="promo.html">Promo</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+    <script src="popo.js"></script>
+</body>
+</html>

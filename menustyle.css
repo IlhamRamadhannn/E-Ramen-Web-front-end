@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --main-color: rgb(190, 102, 0);
+    --text-color: rgb(255, 255, 255);
+    --bg-color:rgb(255, 255, 255);
+    --big-font: 4.8rem;
+    --h2-font:2,25rem;
+    --p-font:0.9rem;
+}
+body{
+    background-image: url("image/stefan-lehner-ZEp1ekh2Mjw-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.heading{
+    line-height: 12px;
+    text-decoration: none;
+    padding-left: 5px;
+    color:#FFF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+.logoo{
+    width: 100px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 2px 8%;
+    overflow: hidden;
+    background-color: #422600;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100vw; /* Full width */
+}
+nav .logo{
+    width: 160;
+    cursor: pointer;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li :hover{
+    color: orange;
+    font-size: 1.1 rem;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+section{
+    padding: 79px 25%;
+}
+.menub{
+    padding-top: 200px;
+}
+.heading{
+    text-align: center;  
+}
+.heading h2{
+    font-size: var(--h2-font);
+}
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+.box{
+    position: relative;
+    margin-top: 4rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #c98731;
+    border-radius: 1.7rem;
+}
+.box img{
+    width: 250px;
+    height: 200px;
+}
+.box img img{
+    width: 100%;
+    height: 100%;
+}
+.box h2{
+font-size: 1.3rem;
+color: var(--bg-color);
+}
+.box h3{
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 4px 0 10px;
+}
+.box span{
+    font-size: var(--p-font);
+    color: #FFF;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        background-color: #422600;
+        z-index: 1;
+    }
+  
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+  
+    nav ul li a {
+        padding: 10px 0;
+        color: #fff;
+    }
+  
+    nav .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+  
+    nav .menu-icon:hover {
+        color: orange;
+    }
+  
+    nav .active {
+        display: block;
+    }
+}
